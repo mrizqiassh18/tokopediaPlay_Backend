@@ -9,6 +9,14 @@ mongoose.connect('mongodb+srv://mrizqiassh:Password@tokopediaplay.sishp75.mongod
     useUnifiedTopology: true
 });
 
+app.use(cors(
+    {
+        origin: 'https://deploy-tokopediaPlay.vercel.app',
+        methods: ['GET', 'POST'],
+        credentials: true
+    }
+));
+
 const db = mongoose.connection;
 
 db.on('error', (error) => console.log(error));
