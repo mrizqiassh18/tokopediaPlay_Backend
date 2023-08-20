@@ -11,11 +11,14 @@ mongoose.connect('mongodb+srv://mrizqiassh:Password@tokopediaplay.sishp75.mongod
 
 app.use(cors(
     {
-        origin: ['https://tokopedia-play-backend.vercel.app'],
+        origin: 'https://tokopedia-play-frontend-five.vercel.app',
         methods: ['GET', 'POST'],
         credentials: true
     }
 ));
+
+// Handle preflight requests
+app.options('/videos/:videoId/comments', cors());
 
 const db = mongoose.connection;
 
