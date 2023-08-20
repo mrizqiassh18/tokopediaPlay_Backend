@@ -11,7 +11,7 @@ mongoose.connect('mongodb+srv://mrizqiassh:Password@tokopediaplay.sishp75.mongod
 
 app.use(cors(
     {
-        origin: 'https://tokopedia-play-backend.vercel.app/',
+        origin: ['https://tokopedia-play-backend.vercel.app/'],
         methods: ['GET', 'POST'],
         credentials: true
     }
